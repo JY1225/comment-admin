@@ -12,33 +12,34 @@ import com.github.pagehelper.PageInfo;
 
 @Controller
 @RequestMapping("/dir")
-public class DirMgrController extends BaseController{
+public class DirMgrController extends BaseController {
 
-	 //private static final Logger LOGGER = LoggerFactory.getLogger(DirMgrController.class);
+	// private static final Logger LOGGER =
+	// LoggerFactory.getLogger(DirMgrController.class);
 
-	 @Autowired
-	 private DirService dirService;
-	 
-	@RequestMapping(value = "list",method = RequestMethod.GET)
+	@Autowired
+	private DirService dirService;
+
+	@RequestMapping(value = "list", method = RequestMethod.GET)
 	public ModelAndView findAllDir(ModelAndView modelAndView) {
 		modelAndView.setViewName("/system/admin/dir/list");
-        return modelAndView;
+		return modelAndView;
 	}
 
-		@ResponseBody
-	    @RequestMapping(value = "page")
-	   public PageBean<RcDir> queryForPage(@RequestParam(value = "start", defaultValue = "1") int start,
-	    		@RequestParam(value = "length", defaultValue = "10") int pageSize, 
-	    		@RequestParam(value = "date", required = false) String date, 
-	    		@RequestParam(value = "search", required = false) String search) {	        
-	        PageInfo<RcDir> pageInfo = dirService.listForPage((start / pageSize) + 1, pageSize);
-	        return new PageBean<RcDir>(pageInfo);
-	    }
-		
-		 @RequestMapping(value = "add", method = RequestMethod.GET)
-		public ModelAndView add(ModelAndView modelAndView) {
-		        modelAndView.setViewName("/system/admin/dir/add");
-		        return modelAndView;
-		    }
+	@ResponseBody
+	@RequestMapping(value = "page")
+	public PageBean<RcDir> queryForPage(@RequestParam(value = "start", defaultValue = "1") int start,
+			@RequestParam(value = "length", defaultValue = "10") int pageSize,
+			@RequestParam(value = "date", required = false) String date,
+			@RequestParam(value = "search", required = false) String search) {
+		PageInfo<RcDir> pageInfo = dirService.listForPage((start / pageSize) + 1, pageSize);
+		return new PageBean<RcDir>(pageInfo);
+	}
+
+	@RequestMapping(value = "add", method = RequestMethod.GET)
+	public ModelAndView add(ModelAndView modelAndView) {
+		modelAndView.setViewName("/system/admin/dir/add");
+		return modelAndView;
+	}
 
 }
