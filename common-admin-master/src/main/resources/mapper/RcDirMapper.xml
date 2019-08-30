@@ -39,12 +39,34 @@
   <sql id="Base_Column_List">
     id, url,status,editUser
   </sql>
+  
    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from rc_dir
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
+  <select id="isHasOpenDir" resultMap="BaseResultMap">
+    select * from rc_dir
+    where status = 1
+  </select>
+  
+  <insert id="insert" parameterType="com.common.system.entity.RcDir">
+    insert into rc_dir (id,url,status,editUser)
+    values (#{id,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},#{status,jdbcType=INTEGER}, #{editUser,jdbcType=VARCHAR})
+  </insert>
+  
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from rc_dir
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <update id="updateById" parameterType="com.common.system.entity.RcDir">
+    update rc_dir set status = #{status,jdbcType=INTEGER}
+	where id = #{id,jdbcType=INTEGER}
+  </update>
+  
   <update id="updateByPrimaryKeySelective" parameterType="com.common.system.entity.RcDir">
     update rc_dir
     <set>
@@ -60,6 +82,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
   <select id="getRcDirList" resultMap="BaseResultMap">
     SELECT * FROM rc_dir
   </select>

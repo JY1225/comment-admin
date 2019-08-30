@@ -78,7 +78,7 @@ $(function() {
 				"render" : function(data) {
 									
 					var btn = '<@shiro.hasPermission name="dir/edit">'
-					+'<a class="btn btn-xs btn-info" onclick="dirToListAjax();" target="modal" modal="lg" href="/dir/edit/'+ data.id+'">修改</a> &nbsp;'
+					+'<a class="btn btn-xs btn-info" callback="dirReload();" target="ajaxTodo"  data-body="确认要修改吗？" href="/dir/edit/'+ data.id+'/'+ data.status+'">状态修改</a> &nbsp;'
 					+'</@shiro.hasPermission>'
 					+'<@shiro.hasPermission name="dir/delete">'
 					+'<a class="btn btn-xs btn-default" callback="dirReload();" data-body="确认要删除吗？" target="ajaxTodo" href="/dir/delete/'+ data.id + '">删除</a>  &nbsp;'

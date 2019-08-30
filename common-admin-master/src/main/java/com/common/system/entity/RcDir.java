@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class RcDir implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private String id;
+	private int id;
     private String editUser;
     private String url;
     private Integer status;
@@ -17,10 +17,10 @@ public class RcDir implements Serializable{
 		this.status = status;
 	}
     
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

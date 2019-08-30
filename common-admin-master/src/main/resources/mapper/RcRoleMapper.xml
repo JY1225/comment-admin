@@ -56,16 +56,19 @@
       order by ${orderByClause}
     </if>
   </select>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from rc_role
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from rc_role
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.common.system.entity.RcRole">
     insert into rc_role (id, name, value,
       tips, create_time, update_time,
@@ -74,6 +77,7 @@
       #{tips,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
       #{status,jdbcType=INTEGER})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.common.system.entity.RcRole">
     insert into rc_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -123,6 +127,7 @@
       </if>
     </trim>
   </insert>
+  
   <update id="updateByPrimaryKeySelective" parameterType="com.common.system.entity.RcRole">
     update rc_role
     <set>
@@ -147,6 +152,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
   <update id="updateByPrimaryKey" parameterType="com.common.system.entity.RcRole">
     update rc_role
     set name = #{name,jdbcType=VARCHAR},
@@ -157,6 +163,7 @@
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
   <select id="getRoleList" resultMap="BaseResultMap">
     SELECT * FROM rc_role
   </select>

@@ -30,17 +30,14 @@ function dirAdd(){
 	$("span").remove(".errorClass");
 	$("br").remove(".errorClass");
 	var status = 1;
-	if($("#dirUrl").val()==""){
-		$("#dirUrlLabel").prepend('<span class="errorClass" style="color:red">*角色名不能为空</span><br class="errorClass"/>');
+	if($("#dirUrl").val()==""){	
+		$("#dirUrlLabel").prepend('<span class="errorClass" style="color:red">*目录不能为空</span><br class="errorClass"/>');
 		status = 0;
-	}
-	if($("#statusValue").val()==""){
-		$("#statusValueLabel").prepend('<span class="errorClass" style="color:red">*角色值不能为空</span><br class="errorClass"/>');
-		status = 0;
-	}
+	}	
+	
 	if(status == 0){
 		return false;
-	}else{
+	}else{	
 		$.ajax({
 			url: '/dir/save',
 	        type: 'post',

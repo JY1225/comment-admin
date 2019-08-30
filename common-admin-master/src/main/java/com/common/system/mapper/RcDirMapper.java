@@ -11,4 +11,12 @@ public interface RcDirMapper {
 	    int updateByPrimaryKeySelective(RcDir record);
 
 	    List<RcDir> getRcDirList();
+
+		List<RcDir> isHasOpenDir();
+
+		void insert(RcDir rcDir);
+
+		void deleteById(Integer id);
+
+		void updateById(RcDir rcDir);
 }
