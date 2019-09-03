@@ -13,4 +13,5 @@ public interface RcUserMapper extends BaseMapper<RcUser> {
     int updateByPrimaryKeySelective(RcUser record);
 
     RcUser getUserByName(String username);
+
 }

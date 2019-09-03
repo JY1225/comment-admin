@@ -18,5 +18,6 @@ public interface UserService {
     PageInfo<RcUser> listForPage(Integer pageNum, Integer pageSize);
 
     int modifyPwd(RcUser user);
+	RcUser findByUserName(String username);
 
 }

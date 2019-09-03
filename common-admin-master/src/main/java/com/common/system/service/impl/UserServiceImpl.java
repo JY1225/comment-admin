@@ -139,4 +139,10 @@ public class UserServiceImpl implements UserService {
         user.setUpdateTime(new Date());
         return userMapper.updateByPrimaryKeySelective(user);
     }
+
+	@Override
+	public RcUser findByUserName(String username) {
+
+		return userMapper.getUserByName(username);
+	}
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.common.system.mapper.CustJccjsMapper">
+  <resultMap id="BaseResultMap" type="com.common.system.entity.Cust_jccjs_list">
+    <id column="recid" jdbcType="INTEGER" property="recid" />
+    <result column="cust_addr_id" jdbcType="VARCHAR" property="cust_addr_id" />
+    <result column="cust_code" jdbcType="VARCHAR" property="cust_code" />
+    <result column="cust_name" jdbcType="VARCHAR" property="cust_name" />
+    <result column="cust_part" jdbcType="VARCHAR" property="cust_part" />
+    <result column="shipping_addr" jdbcType="VARCHAR" property="shipping_addr" />
+    <result column="shipping_dt" jdbcType="TIMESTAMP" property="shipping_dt" />
+    <result column="shipping_jccjs_ptr" jdbcType="VARCHAR" property="shipping_jccjs_ptr" />
+    <result column="shipping_jccjs_no" jdbcType="VARCHAR" property="shipping_jccjs_no" />
+    <result column="upload_filename" jdbcType="VARCHAR" property="upload_filename" />
+    <result column="upload_dt" jdbcType="TIMESTAMP" property="upload_dt" />
+    <result column="upload_terminal" jdbcType="VARCHAR" property="upload_terminal" />
+    <result column="upload_user" jdbcType="VARCHAR" property="upload_user" />
+    <result column="down_loads" jdbcType="INTEGER" property="down_loads" />
+    <result column="previews" jdbcType="INTEGER" property="previews" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    recid, cust_addr_id, cust_code, cust_name, cust_part, shipping_addr, shipping_dt, shipping_jccjs_ptr, shipping_jccjs_no,
+     upload_filename, upload_dt, upload_terminal, upload_user,previews
+  </sql>
+  <select id="listForPage" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from cust_jccjs_list t where t.cust_addr_id in( select ur.addr_id from userinfo_cust_addr ur where ur.user_id = #{recid,jdbcType=INTEGER})
+  </select>
+  
+</mapper>
