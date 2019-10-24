@@ -51,7 +51,7 @@
     <div class="demo">
         <div class="login">
             <div class="login__check">
-                <img src="/adminlte/dist/img/logo.png" alt="">
+                <img src="/adminlte/dist/img/log.png" alt="">
             </div>
             <form action="/postLogin" class="login__form" method="post">
                 <!--默认账号密码user、admin、super-->

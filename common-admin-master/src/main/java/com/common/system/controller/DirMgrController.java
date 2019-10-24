@@ -34,7 +34,7 @@ public class DirMgrController extends BaseController {
 		return modelAndView;
 	}
 
-	@ResponseBody
+	@ResponseBody //返回JSON数据
 	@RequestMapping(value = "page")
 	public PageBean<RcDir> queryForPage(@RequestParam(value = "start", defaultValue = "1") int start,
 			@RequestParam(value = "length", defaultValue = "10") int pageSize,

@@ -94,6 +94,7 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter(DefaultWebSecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
         shiroFilter.setSecurityManager(securityManager);
+        //默认访问路径
         shiroFilter.setLoginUrl("/login");
         shiroFilter.setUnauthorizedUrl("/login");
         shiroFilter.setSuccessUrl("/");

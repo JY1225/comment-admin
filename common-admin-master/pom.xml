@@ -6,7 +6,7 @@
 	<groupId>common-admin</groupId>
 	<artifactId>common-admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>common-admin</name>
 	<description>Demo project for Spring Boot</description>
@@ -227,6 +227,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>
