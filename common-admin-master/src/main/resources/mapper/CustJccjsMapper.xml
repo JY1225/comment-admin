@@ -23,7 +23,7 @@
      upload_filename, upload_dt, upload_terminal, upload_user,previews
   </sql>
   <select id="listForPage" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select * from cust_jccjs_list t where t.cust_addr_id in( select ur.addr_id from userinfo_cust_addr ur where ur.user_id = #{recid,jdbcType=INTEGER})
+    select * from cust_jccjs_list t where t.cust_addr_id in( select ur.addr_id from userinfo_cust_addr ur where ur.user_id = #{user_id,jdbcType=INTEGER})
   </select>
   
 </mapper>

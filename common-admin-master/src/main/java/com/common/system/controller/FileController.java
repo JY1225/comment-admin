@@ -25,8 +25,8 @@ import com.github.pagehelper.PageInfo;
 @Controller
 @RequestMapping("/file")
 public class FileController extends BaseController {
-	 @Autowired
-		private UserService userService;
+	// @Autowired
+	//private UserService userService;
 	@Autowired
     private CustJccjsService custJccjsService;
 	
@@ -42,8 +42,9 @@ public class FileController extends BaseController {
 			@RequestParam(value = "length", defaultValue = "10") int pageSize,
 			@RequestParam(value = "date", required = false) String date,
 			@RequestParam(value = "search", required = false) String search) {
-		ShiroUser user = (ShiroUser) getUser();
-		RcUser rcuser = userService.findByUserName(user.getUsername());
+
+		ShiroUser rcuser = (ShiroUser) getUser();
+		//RcUser rcuser = userService.findByUserName(user.getUsername());
 
 		List<Cust_jccjs_list> list = custJccjsService.listForPage((start / pageSize) + 1, pageSize, rcuser.getId());
 		for (int i = 0; i < list.size(); i++) {

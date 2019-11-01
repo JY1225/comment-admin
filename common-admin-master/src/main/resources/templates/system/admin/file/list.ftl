@@ -5,7 +5,7 @@
 				<h3 class="box-title">列表</h3>
 				<div class="box-tools pull-right">
 					
-						<a onclick="fileToListAjax();" class="btn btn-sm btn-primary" target="modal" modal="lg" href="/file/allDownload">下载</a>
+						<a onclick="fileToListAjax();" class="btn btn-sm btn-primary" target="modal" modal="lg" href="/file/downloads">下载</a>
 					
 				</div>
 			</div>
@@ -14,13 +14,16 @@
 					<thead>
 						<tr>
 							<tr>
+								<th>
+								<input id="selall" type="checkbox" class="icheckbox_square-blue" checked="" value="">
+                                </th>
 								<th>序号</th>
 								<th>用户</th>								
 								<th>送货地址</th>
 								<th>品名</th>
 								<th>送货日期</th>
 								<th>编号</th>
-								<th>文件名</th>								
+								<!--<th>文件名</th>-->								
 								<th>上传时间</th>
 								<th>上传员</th>
 								<th>操作</th>
@@ -48,13 +51,14 @@ $(function() {
 		"language":{"url":"adminlte/plugins/datatables/language.json"},
 		"ajax":{"url":"/file/page","type":"post"},
 		"columns":[ 
+			{"data":null}, 
 		    {"data":null}, 
 			{"data":"cust_name"},
 			{"data":"shipping_addr"},
 			{"data":"cust_part"},
 			{"data":"shipping_dt"},
 			{"data":"shipping_jccjs_no"}, 
-			{"data":"upload_filename"},
+			<!--{"data":"upload_filename"},-->
 			{"data":"upload_dt"},
 			{"data":"upload_user"},
 			{"data":null}  
@@ -62,6 +66,14 @@ $(function() {
 		"columnDefs" : [
 			{
 			    targets: 0,
+			    data: null,
+			    render: function (data) {
+			    var checkbox = '<input name="names" type="checkbox" value="data.upload_filename" id="names" checked="">'		    	
+			        return checkbox;
+			    }
+			},
+			{
+			    targets: 1,
 			    data: null,
 			    render: function (data) {
 			    	No=No+1;
@@ -96,4 +108,17 @@ function fileReload(){
 function fileToListAjax(){
 	list_ajax = file_tab;
 }
+
+
+    
+    $("#selall").click(
+     function(){
+     if(this.checked){
+        $("input[name='names']").attr('checked', true)
+     }else{
+        $("input[name='names']").attr('checked', false)
+         }
+     }
+     );
+
 </script>

@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootApplication
 public class CommonAdminApplication extends WebMvcConfigurerAdapter{
-
+	//账号：super 密码：123456
 	public static void main(String[] args) {
 		SpringApplication.run(CommonAdminApplication.class, args);
 	}
