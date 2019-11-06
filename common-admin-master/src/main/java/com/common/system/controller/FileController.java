@@ -48,7 +48,7 @@ public class FileController extends BaseController {
 
 		List<Cust_jccjs_list> list = custJccjsService.listForPage((start / pageSize) + 1, pageSize, rcuser.getId());
 		for (int i = 0; i < list.size(); i++) {
-			list.get(i).setUpload_filename(list.get(i).getUpload_filename().trim());
+			list.get(i).setUpload_filename(list.get(i).getUpload_filename().trim());			
 		}
 		PageInfo<Cust_jccjs_list> pageInfo = new PageInfo<Cust_jccjs_list>(list);
 		return new PageBean<Cust_jccjs_list>(pageInfo);

@@ -3,10 +3,8 @@
 		<div class="box">
 			<div class="box-header">
 				<h3 class="box-title">列表</h3>
-				<div class="box-tools pull-right">
-					
-						<a onclick="fileToListAjax();" class="btn btn-sm btn-primary" target="modal" modal="lg" href="/file/downloads">下载</a>
-					
+				<div class="box-tools pull-right">					
+					<a onclick="fileToListAjax();" class="btn btn-sm btn-primary" target="modal" modal="lg" href="/file/downloads">下载</a>					
 				</div>
 			</div>
 			<div class="box-body">
@@ -15,7 +13,7 @@
 						<tr>
 							<tr>
 								<th>
-								<input id="selall" type="checkbox" class="icheckbox_square-blue" checked="" value="">
+								<input id="selall" name="selall" type="checkbox" class="icheckbox_square-blue"/>
                                 </th>
 								<th>序号</th>
 								<th>用户</th>								
@@ -40,6 +38,7 @@
 var file_tab;
 $(function() {
 //alert("function")
+//alert($("#selall").prop("checked"))
 	//初始化表格
 	var No=0;
 	file_tab = $('#file_tab').DataTable({
@@ -49,7 +48,7 @@ $(function() {
 		"serverSide":true, //启用服务器端分页
 		"bInfo":false,
 		"language":{"url":"adminlte/plugins/datatables/language.json"},
-		"ajax":{"url":"/file/page","type":"post"},
+		"ajax":{"url":"/file/page","type":"post","data":"{'checkbox':$('#selall').prop('checked')}"},
 		"columns":[ 
 			{"data":null}, 
 		    {"data":null}, 
@@ -68,8 +67,13 @@ $(function() {
 			    targets: 0,
 			    data: null,
 			    render: function (data) {
-			    var checkbox = '<input name="names" type="checkbox" value="data.upload_filename" id="names" checked="">'		    	
-			        return checkbox;
+			    var checkbox = '<input id="names" name="names" type="checkbox" value="data.upload_filename"/>'	
+			   if($("#selall").prop("checked")){
+			    	checkbox = '<input id="names" name="names" type="checkbox" checked="checked" value="data.upload_filename"/>'
+			    }else{
+			    	checkbox = '<input id="names" name="names" type="checkbox" value="data.upload_filename"/>'
+			    }	    	    	
+			    return checkbox;
 			    }
 			},
 			{
@@ -108,17 +112,4 @@ function fileReload(){
 function fileToListAjax(){
 	list_ajax = file_tab;
 }
-
-
-    
-    $("#selall").click(
-     function(){
-     if(this.checked){
-        $("input[name='names']").attr('checked', true)
-     }else{
-        $("input[name='names']").attr('checked', false)
-         }
-     }
-     );
-
 </script>

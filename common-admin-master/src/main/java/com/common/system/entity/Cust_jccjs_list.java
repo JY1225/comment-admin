@@ -20,7 +20,7 @@ public class Cust_jccjs_list implements Serializable{
 	private String upload_user;
 	private int down_loads;
 	private int previews;
-	
+
 	
 	public int getDown_loads() {
 		return down_loads;
@@ -112,6 +112,7 @@ public class Cust_jccjs_list implements Serializable{
 	public void setUpload_user(String upload_user) {
 		this.upload_user = upload_user;
 	}
+	
 	@Override
 	public String toString() {
 		return "Cust_jccjs_list [recid=" + recid + ", cust_addr_id=" + cust_addr_id + ", cust_code=" + cust_code
