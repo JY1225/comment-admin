@@ -35,8 +35,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/6/21.
- * Time:15:46
  * ProjectName:Common-admin
  */
 @Controller

@@ -10,8 +10,6 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author yangxiufeng
- * @since 2017-09-11
  */
 public interface RcUserRoleService extends IService<RcUserRole> {
 	boolean deleteByUserId(Integer userId);

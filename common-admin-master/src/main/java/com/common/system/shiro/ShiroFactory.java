@@ -20,11 +20,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
 
-/**
- * Created by Mr.Yangxiufeng on 2017/6/20.
- * Time:16:46
- * ProjectName:Common-admin
- */
+
 @Service
 public class ShiroFactory {
     @Autowired

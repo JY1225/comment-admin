@@ -17,8 +17,6 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/6/21.
- * Time:15:47
  * ProjectName:Common-admin
  */
 @Controller

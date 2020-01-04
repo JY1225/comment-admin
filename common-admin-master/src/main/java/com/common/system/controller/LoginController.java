@@ -15,8 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/6/15.
- * Time:15:58
+
  * ProjectName:Common-admin
  */
 @Controller

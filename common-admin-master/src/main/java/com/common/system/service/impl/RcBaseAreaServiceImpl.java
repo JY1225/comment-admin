@@ -11,8 +11,7 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author yangxiufeng
- * @since 2017-09-12
+ * 
  */
 @Service
 public class RcBaseAreaServiceImpl extends ServiceImpl<RcBaseAreaMapper, RcBaseArea> implements RcBaseAreaService {

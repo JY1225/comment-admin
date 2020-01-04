@@ -10,9 +10,7 @@ import java.io.Serializable;
  * <p>
  * 
  * </p>
- *
- * @author yangxiufeng
- * @since 2017-09-14
+
  */
 @TableName("rc_operation_log")
 public class RcOperationLog extends Model<RcOperationLog> {

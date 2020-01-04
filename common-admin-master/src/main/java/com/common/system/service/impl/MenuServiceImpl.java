@@ -12,9 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/8/2.
- * Time:14:01
- * ProjectName:Common-admin
+
  */
 @Service
 public class MenuServiceImpl implements MenuService {

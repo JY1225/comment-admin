@@ -1,5 +1,8 @@
 package com.common.system;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
@@ -11,13 +14,13 @@ import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/9/11.
+ * 
  * Time:13:05
  * ProjectName:Common-admin
  */
 public class Generate {
     public static void main(String[] args) {
-
+    	try {
         AutoGenerator generator = new AutoGenerator();
        // 全局配置
         GlobalConfig gc = new GlobalConfig();
@@ -27,7 +30,8 @@ public class Generate {
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
-        gc.setAuthor("yangxiufeng");
+        gc.setAuthor( InetAddress.getLocalHost().getHostName().toString());
+		
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         gc.setServiceName("%sService");
         gc.setServiceImplName("%sServiceImpl");
@@ -66,5 +70,8 @@ public class Generate {
 
         //执行
         generator.execute();
+    	} catch (UnknownHostException e) {			
+			e.printStackTrace();
+		}
     }
 }

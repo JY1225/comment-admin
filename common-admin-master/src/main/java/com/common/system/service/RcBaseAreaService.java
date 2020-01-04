@@ -8,8 +8,6 @@ import com.baomidou.mybatisplus.service.IService;
  *  服务类
  * </p>
  *
- * @author yangxiufeng
- * @since 2017-09-12
  */
 public interface RcBaseAreaService extends IService<RcBaseArea> {
 	

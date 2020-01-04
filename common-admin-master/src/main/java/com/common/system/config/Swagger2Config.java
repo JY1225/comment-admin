@@ -12,8 +12,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/6/26.
- * Time:18:05
  * ProjectName:Common-admin
  */
 @Configuration
@@ -34,7 +32,7 @@ public class Swagger2Config {
                 .title("大数据可视化平台--man端")
                 .description("大数据可视化平台Man端接口说明文档")
                 .termsOfServiceUrl("")
-                .contact(new Contact("杨秀峰","yangxiufeng@gogbuy.com","yangxiufeng@gogbuy.com"))
+                .contact(new Contact("张三","zhangsan@163.com","zhangsan@163.com"))
                 .version("1.0")
                 .build();
     }

@@ -20,9 +20,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/6/26.
- * Time:13:59
- * ProjectName:Common-admin
+ *
  */
 @Service
 public class UserServiceImpl implements UserService {

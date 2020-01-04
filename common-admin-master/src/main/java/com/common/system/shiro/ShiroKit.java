@@ -8,11 +8,7 @@ import org.apache.shiro.util.ByteSource;
 
 import java.util.Random;
 
-/**
- * Created by Mr.Yangxiufeng on 2017/6/20.
- * Time:14:49
- * ProjectName:Common-admin
- */
+
 public class ShiroKit {
     private static final String NAMES_DELIMETER = ",";
 

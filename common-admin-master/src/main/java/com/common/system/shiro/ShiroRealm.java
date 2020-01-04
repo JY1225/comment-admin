@@ -18,11 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-/**
- * Created by Mr.Yangxiufeng on 2017/6/20.
- * Time:15:48
- * ProjectName:Common-admin
- */
+
 public class ShiroRealm extends AuthorizingRealm{
     private static final Logger LOGGER = LoggerFactory.getLogger(ShiroRealm.class);
     @Autowired

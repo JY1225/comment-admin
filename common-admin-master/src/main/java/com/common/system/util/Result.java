@@ -2,11 +2,7 @@ package com.common.system.util;
 
 import java.io.Serializable;
 
-/**
- * Created by Mr.Yangxiufeng on 2017/6/23.
- * Time:9:16
- * ProjectName:Common-admin
- */
+
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = -2342172746518830094L;
     /**

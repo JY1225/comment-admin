@@ -13,8 +13,6 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author yangxiufeng
- * @since 2017-09-11
  */
 @TableName("rc_user_role")
 public class RcUserRole extends Model<RcUserRole> {

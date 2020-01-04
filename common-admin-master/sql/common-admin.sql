@@ -3812,9 +3812,8 @@ CREATE TABLE `rc_user` (
 -- ----------------------------
 INSERT INTO `rc_user` VALUES ('46', null, 'super', 'a5322b1321d2c849e22fa3f62bf87d6b', 'u2w3z', '超级管理员', '2017-06-22 14:26:09', '1', null, null, '1', '2017-06-20 15:12:16', '2017-09-12 14:39:48');
 INSERT INTO `rc_user` VALUES ('48', null, 'admin', '439b9b33eb18d644f3b57e182f45b86a', 'bycca', '管理员', null, '1', null, null, '1', '2017-06-26 17:31:41', null);
-INSERT INTO `rc_user` VALUES ('49', null, 'yangxiufeng', '51d69a1a145c293eedb25e90378a0985', 'hm8ow', '秀秀2', null, '1', null, null, '1', '2017-08-30 10:34:59', null);
 INSERT INTO `rc_user` VALUES ('50', null, 'test', 'add119aedb346d8b58eb4955072344e9', 'xkbjg', '测试用户', null, '1', null, null, '1', '2017-09-11 20:51:31', '2017-09-12 13:09:04');
-INSERT INTO `rc_user` VALUES ('58', null, 'ces1', '19f33490ae4e4732b299d54f9e8f0253', 'rxkuh', 'da', null, '1', null, null, '1', '2017-09-14 16:38:16', null);
+
 
 -- ----------------------------
 -- Table structure for rc_user_dept

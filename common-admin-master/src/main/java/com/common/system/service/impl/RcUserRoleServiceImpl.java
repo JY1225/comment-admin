@@ -14,8 +14,6 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author yangxiufeng
- * @since 2017-09-11
  */
 @Service
 public class RcUserRoleServiceImpl extends ServiceImpl<RcUserRoleMapper, RcUserRole> implements RcUserRoleService {

@@ -9,11 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Mr.Yangxiufeng on 2017/6/20.
- * Time:16:54
- * ProjectName:Common-admin
- */
+
 public class ShiroUser implements Serializable{
     private static final long serialVersionUID = -4661753370573516137L;
 

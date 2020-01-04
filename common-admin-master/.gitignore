@@ -3,7 +3,10 @@
 *.iws
 *.iml
 *.ipr
-/target
+/target/
 /mvnw.cmd
 /mvnw
 /.mvn
+*.classpath
+/.settings/
+*.gitignore

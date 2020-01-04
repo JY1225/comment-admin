@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/9/11.
  * Time:20:43
  * ProjectName:Common-admin
  */

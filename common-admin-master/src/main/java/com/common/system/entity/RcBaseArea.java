@@ -12,9 +12,6 @@ import java.util.List;
  * <p>
  * 
  * </p>
- *
- * @author yangxiufeng
- * @since 2017-09-12
  */
 @TableName("rc_base_area")
 public class RcBaseArea extends Model<RcBaseArea> {

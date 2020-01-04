@@ -10,9 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by Mr.Yangxiufeng on 2017/8/7.
- * Time:11:51
- * ProjectName:Common-admin
+ *
  */
 @Service
 public class PrivilegeServiceImpl implements PrivilegeService {
