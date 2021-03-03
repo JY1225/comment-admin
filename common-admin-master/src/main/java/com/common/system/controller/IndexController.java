@@ -20,6 +20,7 @@ import java.util.List;
 /**
 
  * ProjectName:Common-admin
+ * 设置默认跳转页面
  */
 @RestController
 public class IndexController {

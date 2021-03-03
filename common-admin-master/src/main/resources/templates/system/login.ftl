@@ -55,8 +55,8 @@
             </div>
             <form action="/postLogin" class="login__form" method="post">
                 <!--默认账号密码user、admin、super-->
-			<#--<input type="hidden" name="username" />-->
-			<#--<input type="hidden" name="password" />-->
+			<!--<input type="hidden" name="username" />-->
+			<!--<input type="hidden" name="password" />-->
                 <div class="login__row">
                     <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
                         <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
@@ -137,6 +137,7 @@
             elem.append($ripple);
         }
         ;
+        //登录，注册完登录
         $('.login__form,.reg__form').on('submit', function (e) {
             if (animating)
                 return false;
@@ -151,7 +152,7 @@
             }, submitPhase1);
             return true;
         });
-
+		//注册
         $(".login__signup a").on('click', function (e) {
             var that = $(".login__submit");
             that.addClass('processing success');
@@ -168,7 +169,7 @@
             }, submitPhase2);
             return false;
         });
-
+		//退出注册
         $(document).on('click', '.app__logout', function (e) {
             if (animating)
                 return;

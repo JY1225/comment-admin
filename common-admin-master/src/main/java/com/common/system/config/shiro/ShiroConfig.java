@@ -110,8 +110,8 @@ public class ShiroConfig {
         chains.put("/login", "anon");
         chains.put("/postLogin", "anon");
         /**
-         * 静态资源不拦截
-         * */
+                            * 静态资源不拦截
+         */
         chains.put("/adminlte/**", "anon");
         chains.put("/**","authc");
         shiroFilter.setFilterChainDefinitionMap(chains);

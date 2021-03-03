@@ -33,6 +33,7 @@ public class LoginController extends BaseController{
         Subject subject = ShiroKit.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(username,password.toCharArray());
         try {
+        	//ShiroRealm获取用户信息
             subject.login(token);
             ShiroUser user = (ShiroUser) subject.getPrincipal();
             modelAndView.addObject("user",user);
